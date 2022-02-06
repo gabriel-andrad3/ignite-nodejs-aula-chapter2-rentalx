@@ -1,24 +1,24 @@
-import { Specification } from "../../model/Specification";
+import { Specification } from "../../entities/Specification";
 import {
   ICreateSpecificationDTO,
-  ISpecificationRepository,
-} from "../ISpecificationRepository";
+  ISpecificationsRepository,
+} from "../ISpecificationsRepository";
 
-class SpecificationRepository implements ISpecificationRepository {
+class SpecificationsRepository implements ISpecificationsRepository {
   private specifications: Specification[];
 
   // eslint-disable-next-line no-use-before-define
-  private static INSTANCE: SpecificationRepository;
+  private static INSTANCE: SpecificationsRepository;
 
   private constructor() {
     this.specifications = [];
   }
 
-  public static getInstance(): SpecificationRepository {
-    if (!SpecificationRepository.INSTANCE) {
-      SpecificationRepository.INSTANCE = new SpecificationRepository();
+  public static getInstance(): SpecificationsRepository {
+    if (!SpecificationsRepository.INSTANCE) {
+      SpecificationsRepository.INSTANCE = new SpecificationsRepository();
     }
-    return SpecificationRepository.INSTANCE;
+    return SpecificationsRepository.INSTANCE;
   }
 
   create({ name, description }: ICreateSpecificationDTO): void {
@@ -41,4 +41,4 @@ class SpecificationRepository implements ISpecificationRepository {
   }
 }
 
-export { SpecificationRepository };
+export { SpecificationsRepository };
