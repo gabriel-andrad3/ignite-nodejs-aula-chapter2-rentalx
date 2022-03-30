@@ -18,6 +18,5 @@ export default {
 
   preset: "ts-jest",
 
-  testMatch: ["**/*.spec.ts"],
+  testMatch: ["**/*.spec.ts"]
 };
-
