@@ -60,7 +60,8 @@
             "error",
             { "devDependencies": ["**/*.spec.js"] }
         ],
-        "prettier/prettier": "error"
+        "prettier/prettier": "error",
+        "no-unused-vars": "warn"
     },
     "settings": {
         "import/resolver": {
